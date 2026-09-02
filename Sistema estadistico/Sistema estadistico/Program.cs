@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Calculadora_de_deducciones_de_ley_sobre_el_sueldo
+namespace Sistema_estadistico
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Calculadora_de_deducciones_de_ley_sobre_el_sueldo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSueldos());
+            Application.Run(new Form1());
         }
     }
 }

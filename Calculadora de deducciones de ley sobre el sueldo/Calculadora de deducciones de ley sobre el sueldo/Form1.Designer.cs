@@ -1,7 +1,7 @@
 ﻿
 namespace Calculadora_de_deducciones_de_ley_sobre_el_sueldo
 {
-    partial class Form1
+    partial class frmSueldos
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -180,7 +180,7 @@ namespace Calculadora_de_deducciones_de_ley_sobre_el_sueldo
             this.Label1.TabIndex = 18;
             this.Label1.Text = "Pagos a Empleados";
             // 
-            // Form1
+            // frmSueldos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,8 +194,8 @@ namespace Calculadora_de_deducciones_de_ley_sobre_el_sueldo
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmSueldos";
+            this.Text = "Sueldos";
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Calculadora_de_deducciones_de_ley_sobre_el_sueldo
 {
-    public partial class Form1 : Form
+    public partial class frmSueldos : Form
     {
-        public Form1()
+        public frmSueldos()
         {
             InitializeComponent();
         }
