@@ -24,8 +24,8 @@ namespace Parcial_1_conversor
 
         private void CargarFactores()
         {
-            // Valores de referencia usados comúnmente en El Salvador / Centroamérica
-            factoresAM2 = new Dictionary<string, double>
+            // Diccionario insensible a mayúsculas/minúsculas para prevenir excepciones
+            factoresAM2 = new Dictionary<string, double>(StringComparer.OrdinalIgnoreCase)
             {
                 { "Pie Cuadrado",    0.09290304 },
                 { "Vara Cuadrada",   0.698896   },
@@ -39,6 +39,13 @@ namespace Parcial_1_conversor
 
         private void CargarUnidadesEnCombos()
         {
+            cmbUnidadOrigen.Items.Clear();
+            cmbUnidadDestino.Items.Clear();
+
+            // Evita que el usuario escriba texto libre en los ComboBox
+            cmbUnidadOrigen.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbUnidadDestino.DropDownStyle = ComboBoxStyle.DropDownList;
+
             foreach (string unidad in factoresAM2.Keys)
             {
                 cmbUnidadOrigen.Items.Add(unidad);
@@ -74,9 +81,12 @@ namespace Parcial_1_conversor
                 return;
             }
 
-            if (!double.TryParse(txtValor.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out double valor) || valor < 0)
+            // Normaliza la entrada reemplazando coma por punto
+            string textoInput = txtValor.Text.Trim().Replace(',', '.');
+
+            if (!double.TryParse(textoInput, NumberStyles.Any, CultureInfo.InvariantCulture, out double valor) || valor < 0)
             {
-                MessageBox.Show("Ingrese un valor numérico válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Ingrese un valor numérico válido y positivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -85,12 +95,13 @@ namespace Parcial_1_conversor
 
             double resultado = ConvertirArea(valor, unidadOrigen, unidadDestino);
 
-            txtResultado.Text = resultado.ToString("N4") + "  " + unidadDestino;
+            // Formato '0.######' muestra decimales dinámicos sin ceros sobrantes
+            txtResultado.Text = $"{resultado:0.######} {unidadDestino}";
 
             dgvHistorial.Rows.Insert(0,
-                valor.ToString("N2"),
+                valor.ToString("0.######"),
                 unidadOrigen,
-                resultado.ToString("N4"),
+                resultado.ToString("0.######"),
                 unidadDestino
             );
         }
