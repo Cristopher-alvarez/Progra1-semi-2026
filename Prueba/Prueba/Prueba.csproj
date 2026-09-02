@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{914FD45D-A2DA-4F5F-A8D9-C36AE8601B60}</ProjectGuid>
+    <ProjectGuid>{1B03B5A6-E17A-41B3-8666-5FDBA98DF44C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Trabajo_con_LINQ</RootNamespace>
-    <AssemblyName>Trabajo con LINQ</AssemblyName>
+    <RootNamespace>Prueba</RootNamespace>
+    <AssemblyName>Prueba</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
