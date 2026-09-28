@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.37206.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora de deducciones de ley sobre el sueldo", "Calculadora de deducciones de ley sobre el sueldo\Calculadora de deducciones de ley sobre el sueldo.csproj", "{5F68FC77-C841-4064-97F4-E5212AA59835}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F68FC77-C841-4064-97F4-E5212AA59835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F68FC77-C841-4064-97F4-E5212AA59835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F68FC77-C841-4064-97F4-E5212AA59835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F68FC77-C841-4064-97F4-E5212AA59835}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF8BBEA2-4DC7-491C-9DD2-DEF9F06B9521}
+	EndGlobalSection
+EndGlobal
