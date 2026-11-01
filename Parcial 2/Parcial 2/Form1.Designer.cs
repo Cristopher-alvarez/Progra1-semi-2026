@@ -38,11 +38,6 @@
             btnAnteriorUsuario = new Button();
             btnPrimerUsuario = new Button();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
             grbDatos = new GroupBox();
             txtTelefono = new TextBox();
             lblTelefono = new Label();
@@ -56,10 +51,13 @@
             lblConfirmarClave = new Label();
             lblClave = new Label();
             lblUsuario = new Label();
+            grbBuscar = new GroupBox();
+            txtBuscarUsuario = new TextBox();
             grbEdicion.SuspendLayout();
             grbNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             grbDatos.SuspendLayout();
+            grbBuscar.SuspendLayout();
             SuspendLayout();
             // 
             // grbEdicion
@@ -157,41 +155,15 @@
             btnPrimerUsuario.TabIndex = 2;
             btnPrimerUsuario.Text = "|<";
             btnPrimerUsuario.UseVisualStyleBackColor = true;
-            //btnPrimerUsuario.Click += button1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(395, 36);
+            dataGridView1.Location = new Point(389, 105);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(542, 197);
             dataGridView1.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "ID";
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Usuario";
-            Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Nombre";
-            Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Direccion";
-            Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Telefono";
-            Column5.Name = "Column5";
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // grbDatos
             // 
@@ -310,11 +282,30 @@
             lblUsuario.TabIndex = 1;
             lblUsuario.Text = "Usuario";
             // 
+            // grbBuscar
+            // 
+            grbBuscar.Controls.Add(txtBuscarUsuario);
+            grbBuscar.Location = new Point(389, 58);
+            grbBuscar.Name = "grbBuscar";
+            grbBuscar.Size = new Size(277, 45);
+            grbBuscar.TabIndex = 4;
+            grbBuscar.TabStop = false;
+            grbBuscar.Text = "Buscar";
+            // 
+            // txtBuscarUsuario
+            // 
+            txtBuscarUsuario.Location = new Point(6, 19);
+            txtBuscarUsuario.Name = "txtBuscarUsuario";
+            txtBuscarUsuario.Size = new Size(187, 23);
+            txtBuscarUsuario.TabIndex = 7;
+            txtBuscarUsuario.TextChanged += txtBuscarUsuario_TextChanged;
+            // 
             // frm_usuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(952, 450);
+            Controls.Add(grbBuscar);
             Controls.Add(grbDatos);
             Controls.Add(dataGridView1);
             Controls.Add(grbNavegacion);
@@ -327,6 +318,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             grbDatos.ResumeLayout(false);
             grbDatos.PerformLayout();
+            grbBuscar.ResumeLayout(false);
+            grbBuscar.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -341,11 +334,6 @@
         private Button btnAgregarUsuario;
         private DataGridView dataGridView1;
         private Button btnModificarUsuario;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
         private GroupBox grbDatos;
         private TextBox txtClave;
         private TextBox txtDireccion;
@@ -362,5 +350,7 @@
         private Label lblTelefono;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblConfirmarClave;
+        private GroupBox grbBuscar;
+        private TextBox txtBuscarUsuario;
     }
 }
